@@ -5,10 +5,10 @@ metadata:
   name: system-upgrade
   namespace: flux-system
 spec:
-  interval: 2m0s
+  interval: 5m0s
   path: ./system-upgrade
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  validation: client
+  validation: none

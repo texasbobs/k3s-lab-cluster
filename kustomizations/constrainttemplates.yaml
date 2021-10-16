@@ -5,10 +5,10 @@ metadata:
   name: templates
   namespace: flux-system
 spec:
-  interval: 2m0s
+  interval: 1m0s
   path: ./templates
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  validation: client
+  validation: none
