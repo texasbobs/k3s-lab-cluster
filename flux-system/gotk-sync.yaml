@@ -57,7 +57,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: consrtaints
+  name: constraints
   namespace: flux-system
 spec:
   interval: 2m0s
@@ -71,7 +71,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: consrtaints
+  name: templates
   namespace: flux-system
 spec:
   interval: 2m0s
