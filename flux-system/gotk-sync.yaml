@@ -75,7 +75,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 2m0s
-  path: ./constraints/templates
+  path: ./templates
   prune: true
   sourceRef:
     kind: GitRepository
