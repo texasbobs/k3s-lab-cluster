@@ -5,7 +5,7 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 2m0s
+  interval: 1m0s
   ref:
     branch: main
   secretRef:
@@ -15,71 +15,19 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: flux-system
+  name: kustomizations
   namespace: flux-system
 spec:
-  interval: 2m0s
-  path: ./flux-system
+  interval: 1m0s
+  path: ./kustomizations
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
   validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: gatekeeper
-  namespace: flux-system
-spec:
-  interval: 2m0s
-  path: ./gatekeeper
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: system-upgrade
-  namespace: flux-system
-spec:
-  interval: 2m0s
-  path: ./system-upgrade
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: constraints
-  namespace: flux-system
-spec:
-  interval: 2m0s
-  path: ./constraints/constraints
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  validation: none
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: templates
-  namespace: flux-system
-spec:
-  interval: 2m0s
-  path: ./templates
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  validation: none
+
+
+
+
 
   
