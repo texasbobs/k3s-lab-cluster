@@ -6,6 +6,7 @@ metadata:
       Requires containers to have memory and CPU limits set and constrains limits to be within the specified maximum values.
       https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
   name: k8scontainerlimits
+  namespace: gatekeeper-system
 spec:
   crd:
     spec:
